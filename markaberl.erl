@@ -3,6 +3,7 @@
 
 test() ->
   "<tag>innertext</tag>" = build({tag, innertext}),
+  "<tag><anothertag>innertext</anothertag></tag>" = build({tag, { anothertag, innertext}}),
   success.
 
 build({Tag, Body}) ->
